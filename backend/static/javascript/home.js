@@ -1,28 +1,48 @@
 let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+let slideTimer;
 
 function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
+  const slides = document.getElementsByClassName("mySlides");
+  const dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) { slideIndex = 1; }
+  if (n < 1) { slideIndex = slides.length; }
+
+  for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
+  for (let i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
 }
+
+function plusSlides(n) {
+  slideIndex += n;
+  resetTimer();
+  showSlides(slideIndex);
+}
+
+function currentSlide(n) {
+  slideIndex = n;
+  resetTimer();
+  showSlides(slideIndex);
+}
+
+function resetTimer() {
+  clearInterval(slideTimer);
+  slideTimer = setInterval(function() {
+    plusSlides(1);
+  }, 3000);
+}
+
+// شروع اسلایدر با نمایش اولین اسلاید و راه‌اندازی تایمر
+window.onload = function() {
+  showSlides(slideIndex);
+  slideTimer = setInterval(function() {
+    plusSlides(1);
+  }, 3000);
+};
+
