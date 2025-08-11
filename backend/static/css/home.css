@@ -85,31 +85,39 @@
   from {opacity: .4}
   to {opacity: 1}
 }
-.about-brand{
-  float: left;
-  margin-left: 500px;
+.about-brand {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #333;
 }
-.about-brand-text{
-    float: left;
-    margin-left: 210px;
-    
+.about-brand-text {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #444;
 }
-.about-brand-text-second{
-        float: left;
-    margin-left: 130px;
+.about-brand-text-second {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #555;
 }
-.about-brand-text-third{
-          float: left;
-    margin-left: 180px;
+
+.about-brand-text-third,
+.about-brand-text-forth,
+.about-brand-text-fifth {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #666;
 }
-.about-brand-text-forth{
-    float: left;
-    margin-left: 150px;
+
+.about-brand-text-fifth {
+    margin-bottom: 0;
+    padding-top: 5px;
+    border-top: 1px solid #eee;
 }
-.about-brand-text-fifth{
-    float: left;
-    margin-left: 70px;
-}
+
 * {
   box-sizing: border-box;
 }
@@ -196,19 +204,26 @@
 .demo:hover {
   opacity: 1;
 }
-.entry-room{
-    width: 700px;
-    height: 300px;
-    float: right;
-    margin-top: 30px;
+.entry-room {
+    width: 50%; /* یا مقدار پیکسل مورد نظر شما */
+    height: auto;
+    flex-shrink: 0;
 }
 
-.entry-room-second-image{
-    float: right;
-     width: 600px;
-    height: 340px;
+
+.entry-room {
+    width: 45%;
+    height: auto;
+    border-radius: 8px;
 }
-.below-images{
-    display: flexbox;
+.below-images {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: 40px;
     margin-top: 40px;
+}
+.text-content {
+    width: 55%;
+    text-align: right;
 }
