@@ -212,3 +212,12 @@
     display: flexbox;
     margin-top: 40px;
 }
+.products{
+  margin-left: 500px;
+ margin-top: 200px;
+}
+.product-one{
+  height: 100px;
+  width: 30px;
+}
+
