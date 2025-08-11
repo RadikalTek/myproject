@@ -42,35 +42,75 @@
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
-<!--about brand-->
 
 
 
-<div class="below-images">
-<img src="{% static 'images/header_images/entry-room.jpg'%}" class="entry-room">
-<h2 class="about-brand">
-    پروتئین شاپ
-</h2>
-<p class="about-brand-text">
-    در پروتئین شاپ، ما می‌دانیم که هر لقمه‌ سوسیس و کالباس باید ترکیبی از طعم دلپذیر و ارزش غذایی بالا باشد
-</p>
-<p class="about-brand-text-second">
-    محصولات ما با دقت و وسواس بالا، از بهترین مواد اولیه تهیه می‌شوند تا انرژی و پروتئین مورد نیاز روزانه شما را تأمین کنند
-</p>
-<p class="about-brand-text-third">
-     با پروتئین شاپ، نه فقط یک خوراکی خوشمزه، بلکه یک سبک زندگی سالم و پویا را تجربه کنید و از زندگی لذت ببرید
-</p>
-<p class="about-brand-text-forth">
-     پروتئین شاپ انتخابی هوشمندانه برای دوستداران طعم اصیل و تغذیه سالم است که هر بار رضایت و انرژی را به همراه دارد
-</p>
-<p class="about-brand-text-fifth">
-پروتئین شاپ با تمرکز  بر کیفیت بالا، تجربه‌ای خوشمزه و سالم را در هر بسته به شما ارائه می‌دهد تا زندگی‌ای پرانرژی و متعادل داشته باشید
-</p>
-</div>
 <!--products-->
-<div>
-<h2 class="products">محصولات</h2>
-<img src="{% static 'images/header_images/product.jpg'%}" class="product-one">
+<div class="product-container">
+  <h2 class="products">محصولات</h2>
+<div class="card">
+  <div class="image_container">
+    <img src="{% static 'images/header_images/product-one-new.jpg'%}" style="width: 100%;height: 100%;">
+      <path
+        d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"
+      ></path>
+    </svg>
+  </div>
+  <div class="title">
+    <span>دودی‌لقمه</span>
+  </div>
+  <button class="cart-button">
+    <span>اطلاعات بیشتر</span>
+  </button>
+</div>
+<!--product two-->
+<div class="card-two">
+  <div class="image_container">
+    <img src="{% static 'images/header_images/product-two.jpg'%}" style="width: 100%;height: 100%;">
+      <path
+        d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"
+      ></path>
+    </svg>
+  </div>
+  <div class="title">
+    <span>کالباس مورتادلا</span>
+  </div>
+  <button class="cart-button">
+    <span>اطلاعات بیشتر</span>
+  </button>
+</div>
+<!--product three-->
+<div class="card-three">
+  <div class="image_container">
+    <img src="{% static 'images/header_images/product-three.jpg'%}" style="width: 100%;height: 100%;">
+      <path
+        d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"
+      ></path>
+    </svg>
+  </div>
+  <div class="title">
+    <span>هات داگ</span>
+  </div>
+  <button class="cart-button">
+    <span>اطلاعات بیشتر</span>
+  </button>
+</div>
+<!--product four-->
+<div class="card-four">
+  <div class="image_container">
+    <img src="{% static 'images/header_images/product-four.jpg'%}" style="width: 100%;height: 100%;">
+      <path
+        d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"
+      ></path>
+    </svg>
+  </div>
+  <div class="title">
+    <span>سالامی</span>
+  </div>
+  <button class="cart-button">
+    <span>اطلاعات بیشتر</span>
+  </button>
+</div>
 </div>
 </body>
 </html>
