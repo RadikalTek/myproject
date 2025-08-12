@@ -477,7 +477,7 @@
   direction: rtl;
 }
 /*news
-/* From Uiverse.io by theleaderofenemy */ 
+/*  */ 
 .tooltip-container {
   position: relative;
   display: inline-block;
@@ -531,7 +531,7 @@ margin-left: -440px;
   transform: translate(-50%, -5px);
 }
 /*news-one
-/* From Uiverse.io by Yaya12085 */ 
+/*  */ 
 .news {
   max-width: 300px;
   border-radius: 0.5rem;
@@ -683,3 +683,340 @@ margin-top: -240px;
 float: right;
 margin-top: -40px;
 }
+/* newspaper clases */ 
+/*  */ 
+.form {
+  display: flex;
+  flex-direction: column;
+  background: #606c88;
+  background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);
+  background: linear-gradient(to right, #3f4c6b, #606c88);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 350px;
+  margin-top: 100px;
+  float: left;
+  margin-left: 120px;
+}
+
+.title {
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #fff;
+margin-left: -2px;
+direction: rtl;
+}
+
+.description {
+  line-height: 1.5rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: rgb(209 213 219);
+  direction: rtl;
+}
+
+.form div {
+  display: flex;
+  max-width: 28rem;
+  margin-top: 1rem;
+  column-gap: 0.5rem;
+}
+
+.form div input {
+  outline: none;
+  line-height: 1.5rem;
+  font-size: 0.875rem;
+  color: rgb(255 255 255 );
+  padding: 0.5rem 0.875rem;
+  background-color: rgb(255 255 255 / 0.05);
+  border: 1px solid rgba(253, 253, 253, 0.363);
+  border-radius: 0.375rem;
+  flex: 1 1 auto;
+}
+
+.form div input::placeholder {
+  color: rgb(216, 212, 212);
+  float: right;
+}
+
+.form div input:focus {
+  border: 1px solid rgb(99 102 241);
+}
+
+.form div button {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 0.625rem 0.875rem;
+  background-color: rgb(99 102 241);
+  border-radius: 0.375rem;
+  border: none;
+  outline: none;
+}
+/* comments gallery */ 
+
+@keyframes autoRun3d {
+  from {
+    transform: perspective(800px) rotateY(-360deg);
+  }
+  to {
+    transform: perspective(800px) rotateY(0deg);
+  }
+}
+
+@keyframes animateBrightness {
+  10% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(0.1);
+  }
+  90% {
+    filter: brightness(1);
+  }
+}
+
+
+.comment-contanier{
+  float: right;
+  display: flexbox;
+}
+/* From Uiverse.io by vinodjangid07 */ 
+.bookmarkBtn {
+  width: 130px;
+  height: 40px;
+  border-radius: 40px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.062);
+  margin-top: 50px;
+float: right;
+margin-right: 400px;
+}
+
+.IconContainer {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(103, 74, 228);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+  transition-duration: .3s;
+}
+
+.icon {
+  border-radius: 1px;
+}
+
+.text {
+  height: 100%;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(26, 26, 26);
+  z-index: 1;
+  transition-duration: .3s;
+  font-size: 1.04em;
+  font-weight: 600;
+}
+
+.bookmarkBtn:hover .IconContainer {
+  width: 120px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+
+.bookmarkBtn:hover .text {
+  transform: translate(10px);
+  width: 0;
+  font-size: 0;
+  transition-duration: .3s;
+}
+
+.bookmarkBtn:active {
+  transform: scale(0.95);
+  transition-duration: .3s;
+}
+
+.task {
+  position: relative;
+  color: #2e2e2f;
+  cursor: move;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  margin-bottom: 1rem;
+  border: 3px dashed transparent;
+  max-width: 350px;
+  margin-top: 20px;
+
+}
+.task-two{
+    position: relative;
+  color: #2e2e2f;
+  cursor: move;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  margin-bottom: 1rem;
+  border: 3px dashed transparent;
+  max-width: 350px;
+  margin-top: 20px;
+  padding-right: 120px;
+
+}
+
+.task:hover {
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+  border-color: rgba(162, 179, 207, 0.2) !important;
+}
+
+.task p {
+  font-size: 15px;
+  margin: 1.2rem 0;
+}
+
+.tag {
+  border-radius: 100px;
+  padding: 4px 13px;
+  font-size: 12px;
+  color: #ffffff;
+  background-color: #1389eb;
+}
+
+.tags {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.options {
+  background: transparent;
+  border: 0;
+  color: #c4cad3;
+  font-size: 17px;
+}
+
+.options svg {
+  fill: #9fa4aa;
+  width: 20px;
+}
+
+.stats {
+  position: relative;
+  width: 100%;
+  color: #9fa4aa;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stats div {
+  margin-right: 1rem;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.stats svg {
+  margin-right: 5px;
+  height: 100%;
+  stroke: #9fa4aa;
+}
+
+.viewer span {
+  height: 30px;
+  width: 30px;
+  background-color: rgb(28, 117, 219);
+  margin-right: -10px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  padding: 2px;
+}
+
+.viewer span svg {
+  stroke: #fff;
+}
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+  font-size: 15px;
+margin-left: 1000px;
+}
+
+.btn-2 {
+  background: #004dff;
+  background: linear-gradient(0deg, #004dff 0%, #004dff 100%);
+  border: none;
+}
+
+.btn-2:before {
+  height: 0%;
+  width: 2px;
+}
+
+.btn-2:hover {
+  box-shadow: 4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+.all-comment{
+display: flex;
+margin-top: 140px;
+padding-left: 250px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
