@@ -1,0 +1,97 @@
+.contact-header{
+    margin-left: 600px;
+    margin-top: 120px;
+        text-decoration: underline;
+    text-decoration-color: brown;
+text-decoration-thickness: 3px;
+text-underline-offset: 8px;
+}
+.contact-items{
+    float: right;
+    
+   display: flex;
+}
+.contact-items-two{
+    float: right;
+   display: flex;
+   margin-top: 210px;
+  margin-right: -570px;
+}
+
+.number-container{
+    display: block;
+    margin-top: 20px;
+}
+.email-container{
+        display: block;
+    margin-top: 20px;
+   padding-left: 200px;
+margin-right: -105px;
+   
+}
+.addres-container{
+       display: block;
+    margin-top: 20px;
+   padding-left: 100px;
+}
+.day-container{
+           display: block;
+    margin-top: 20px;
+   padding-left: 100px;
+   margin-right: 100px;
+}
+
+.telephone-image{
+    width: 40px;
+    height: 40px;
+   margin-left: 12px;
+}
+.address-image{
+        width: 40px;
+    height: 40px;
+   margin-left: 170px;
+}
+.email-image{
+        width: 40px;
+    height: 40px;
+  margin-left: 58px;
+}
+.clock-image{
+            width: 50px;
+    height: 50px;
+  margin-left: 58px;
+}
+.telephone-header{
+           text-decoration: underline;
+    text-decoration-color: brown;
+text-decoration-thickness: 3px;
+text-underline-offset: 8px; 
+margin-left: 15px;
+
+}
+.email-header{
+              text-decoration: underline;
+    text-decoration-color: brown;
+text-decoration-thickness: 3px;
+text-underline-offset: 8px; 
+padding-right: -50px;
+}
+.day-header{
+                  text-decoration: underline;
+    text-decoration-color: brown;
+text-decoration-thickness: 3px;
+text-underline-offset: 8px; 
+margin-left: 30px; 
+}
+.address-header{
+               text-decoration: underline;
+    text-decoration-color: brown;
+text-decoration-thickness: 3px;
+text-underline-offset: 8px; 
+margin-left: 170px;
+}
+.email-text{
+  margin-top: 130px;
+   display: block;
+   margin-right: 64px;
+}

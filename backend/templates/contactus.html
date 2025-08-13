@@ -1,11 +1,41 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contactus page</title>
+     <link rel="stylesheet" href="{% static 'css/contact.css' %}">
 </head>
 <body>
-    <h1>صفحه ی تماس با ما</h1>
+     {% include 'navbar.html'%}
+     <h1 class="contact-header">ارتباط با شما افتخار ماست</h1>
+     <div class="contact-items">
+        <div class="number-container">
+             <img src="{% static 'images/header_images/telephone.png'%}" class="telephone-image">
+              <h2 class="telephone-header">تلفن</h2>
+         <P class="">021-345678</P>
+      </div>
+       <div class="addres-container">
+             <img src="{% static 'images/header_images/location.png'%}" class="address-image">
+              <h2 class="address-header">آدرس</h2>
+         <P class="">تهران، خیابان ولیعصر، بالاتر از میدان ونک، پلاک ۲۳۴، طبقه دوم، واحد ۵</P>
+      </div>
+      <!--contact-part-one-->
+     </div>
+      <!--contact-part-two-->
+          <div class="contact-items-two">
+        <div class="email-container">
+             <img src="{% static 'images/header_images/mail.png'%}" class="telephone-image">
+              <h2 class="telephone-header">ایمیل</h2>
+      </div>
+       <P class="email-text">proteinshop13@gmail.com</P>
+       <div class="day-container">
+             <img src="{% static 'images/header_images/working-hours.png'%}" class="clock-image">
+              <h2 class="day-header">ساعات کاری</h2>
+         <P class="">از شنبه تا پنجشنبه 9 صبح تا 8 شب</P>
+      </div>
+      <!--contact-part-two-->
+     </div>
 </body>
 </html>
