@@ -1,0 +1,8 @@
+.product-header{
+        margin-left: 660px;
+    margin-top: 60px;
+        text-decoration: underline;
+    text-decoration-color: brown;
+text-decoration-thickness: 3px;
+text-underline-offset: 8px;
+}
