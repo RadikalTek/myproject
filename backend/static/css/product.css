@@ -6,3 +6,26 @@
 text-decoration-thickness: 3px;
 text-underline-offset: 8px;
 }
+.product-image{
+    width: 400px;
+    height: 400px;
+    float: right;
+    margin-right: 130px;
+    border-radius: 2%;
+}
+.text-one{
+    margin-left: 230px;
+}
+.text-two{
+    margin-left: 336px;
+}
+.text-three{
+     margin-left: 210px;
+}
+.text-four{
+    margin-left: 260px;
+}
+.icon-one{
+    width: 100px;
+    height: 100px;
+}
