@@ -6,42 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
-     <body>
-        <div>
-         
-        <ul>
-       <li>
-        <img alt="user-account" src="{% static 'images/header_images/profile.png'%}" class="header-icons-account" />
-       </li>
-            <li>
-                 <img alt="user-account" src="{% static 'images/header_images/logo brand.png'%}" class="header-icons-website-logo" />
-            </li>
-        </ul>
-           
-        <div class="first-header">
-         <ul>
-       
-         <li class="icons-space">
-          <img alt="instagram-logo" src="{% static 'images/header_images/instagram-logo.png'%}" class="header-icons"/>
-         </li>
-    <li>
-          <img alt="whatsup-logo-logo" src="{% static 'images/header_images/whatsapp.png'%}" class="header-icons"/>
-         </li>
-             <li>
-          <img alt="telegram-logo" src="{% static 'images/header_images/telegram.png'%}" class="header-icons"/>
-         </li>
-         </ul>
+</head>
+<body>
+    <header class="main-header">
+        <div class="top-bar">
+            <div class="social-icons">
+                <a href="#"><img alt="instagram-logo" src="{% static 'images/header_images/instagram-logo.png'%}" class="header-icons"/></a>
+                <a href="#"><img alt="whatsup-logo" src="{% static 'images/header_images/whatsapp.png'%}" class="header-icons"/></a>
+                <a href="#"><img alt="telegram-logo" src="{% static 'images/header_images/telegram.png'%}" class="header-icons"/></a>
+            </div>
+            
+            <div class="logo">
+                <img alt="website-logo" src="{% static 'images/header_images/logo brand.png'%}" class="header-icons-website-logo"/>
+            </div>
+            
+            <div class="user-account">
+                <a href="account/login"><img alt="user-account" src="{% static 'images/header_images/profile.png'%}" class="header-icons-account"/></a>
+            </div>
         </div>
-
-        </div>
-    <div>
-    <ul class="Menuecontainere">
-        <li><p><a href="{%static 'templates/news.html'%}">صفحه اصلی</a></p></li>
-        <li><p>محصولات</p></li>
-        <li><p>اخبار</p></li>
-        <li><p>ارتباط با ما</p></li>
-        <li><p>معرفی شرکت</p></li>
-   </ul>
-   </div>
+        
+        <nav class="main-nav">
+            <ul class="menu-container">
+                <li><a href="/">صفحه اصلی</a></li>
+                <li><a href="/shop/products">محصولات</a></li>
+                <li><a href="/news">اخبار</a></li>
+                <li><a href="/core/contactus">ارتباط با ما</a></li>
+                <li><a href="/core/aboutus">معرفی شرکت</a></li>
+            </ul>
+        </nav>
+    </header>
 </body>
 </html>
