@@ -1,12 +1,31 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>register page</title>
+       <link rel="stylesheet" href="{% static 'css/register.css' %}">
 </head>
 <body>
-    <h1>صفحه ی ثبت نام</h1>
-    <a href="/account/myaccount/">اکانت من</a>
+    {% include 'navbar.html'%}
+    <!--  --> 
+<div class="form-box">
+<form class="form">
+    <span class="title">ثبت نام</span>
+    <span class="subtitle">با ایمیل خود اکانت رایگان بسازید</span>
+    <div class="form-container">
+      <input type="text" class="input" placeholder="نام کاربری">
+			<input type="email" class="input" placeholder="ایمیل">
+			<input type="password" class="input" placeholder="رمز عبور">
+    </div>
+    <button>ثبت نام</button>
+</form>
+<div class="form-section">
+ <p class="signup-link">حساب کاربری دارید؟ <a class="sign-up" style="margin-right: 4px;" href="#">ورود</a></p>
+ 
+</div>
+</div>
+ {% include 'footer.html'%}
 </body>
 </html>

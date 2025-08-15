@@ -1,11 +1,52 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>myaccount page</title>
+     <link rel="stylesheet" href="{% static 'css/myaccount.css' %}">
 </head>
 <body>
-    <h1>صفحه ی اکانت من</h1>
-</body>
+    <div style="margin-bottom:10px;">
+     {% include 'navbar.html'%}
+     </div>
+<div style="height:80px"></div>
+<main class="container">
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="card">
+        <div class="card-body">
+          <div class="profile">
+            <div class="avatar">MH</div>
+            <div>
+              <h2>محمد حسن</h2>
+              <div class="subtext">کاربر ثبت‌نام‌شده از ۱۴۰۳/۰۹/۱۲</div>
+            </div>
+          </div>
+          <div class="nav">
+            <a href="#profile" class="active">پروفایل</a>
+            <a href="#contact">ارتباط با شرکت</a>
+            <a href="#news">اخبار و رویدادها</a>
+            <a href="#downloads">دانلودها</a>
+            <a href="#support">پشتیبانی</a>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar-actions">
+        <button class="btn secondary">کاتالوگ محصولات</button>
+        <button class="btn">خروج</button>
+      </div>
+    </aside>
+    <section class="content">
+      <div class="card" id="profile">
+        <div class="card-body">
+          <h3>پروفایل کاربری</h3>
+          <p>اطلاعات حساب خود را بررسی و ویرایش کنید.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+    {% include 'footer.html'%}
 </html>
