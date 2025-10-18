@@ -1,77 +1,117 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>products page</title>
-      <link rel="stylesheet" href="{% static 'css/products.css' %}">
+    <title>صفحه محصولات</title>
+    <link rel="stylesheet" href="{% static 'css/products.css' %}">
+    <style>
+        /* فقط تنظیم موقعیت سه محصول در یک ردیف */
+        .product-first-line {
+            display: flex;
+            justify-content: center;   /* وسط‌چین افقی */
+            align-items: flex-start;   /* از بالا تراز شوند */
+            gap: 10px;                 /* فاصله بین کارت‌ها */
+            flex-wrap: nowrap;         /* در یک خط بمانند */
+            width: 100%;
+            max-width: 1100px;   
+            padding-right: 30px;     /* وسط صفحه */
+        }
+
+        /* اطمینان از اندازه و ظاهر یکنواخت کارت‌ها */
+        .card-two {
+            flex: 1;
+            max-width: 320px;          /* عرض مناسب برای هر کارت */
+            min-width: 280px;
+        }
+
+        /* جلوگیری از بزرگ‌تر شدن عکس‌ها از محدوده کارت */
+        .image_container img {
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* برای موبایل — محصولات زیر هم قرار گیرند */
+        @media (max-width: 900px) {
+            .product-first-line {
+                flex-wrap: wrap;        /* اجازه چند خطی شدن */
+                gap: 20px;
+            }
+            .card-two {
+                flex: 1 1 45%;          /* دو کارت در هر خط */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .card-two {
+                flex: 1 1 100%;         /* یکی در هر خط */
+            }
+        }
+    </style>
 </head>
+
 <body>
-      {% include 'navbar.html'%}
-    <h1 class="product-header">محصولات</h1>
-    <!--product-one-->
-    <div class="product-first-line">
-    <div class="card-two">
-  <div class="image_container">
-    <a href="/shop/product1/">
-    <img src="{% static 'images/header_images/product-two.jpg'%}" style="width: 100%;height: 100%;">
-    </a>  
-    <path
-        d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"
-      ></path>
-    </svg>
+  {% include 'navbar.html' %}
+
+  <h1 class="product-header">محصولات</h1>
+
+  <!-- خط اول محصولات -->
+  <div class="product-first-line">
+
+      <!-- محصول اول -->
+      <div class="card-two">
+          <div class="image_container">
+              <a href="/shop/product1/">
+                  <img src="{% static 'images/header_images/product-two.jpg' %}" alt="کالباس مورتادلا" style="width: 100%; height: 100%;">
+              </a>
+          </div>
+          <div class="title">
+              <span class="product-one-header">کالباس مورتادلا</span>
+          </div>
+          <a href="/shop/product1/">
+              <button class="cart-button">
+                  <span class="more-info">اطلاعات بیشتر</span>
+              </button>
+          </a>
+      </div>
+
+      <!-- محصول دوم -->
+      <div class="card-two">
+          <div class="image_container">
+              <a href="/shop/product2/">
+                  <img src="{% static 'images/header_images/product-three.jpg' %}" alt="هات داگ" style="width: 100%; height: 100%;">
+              </a>
+          </div>
+          <div class="title">
+              <span class="product-two-header">هات داگ</span>
+          </div>
+          <a href="/shop/product2/">
+              <button class="cart-button">
+                  <span class="more-info">اطلاعات بیشتر</span>
+              </button>
+          </a>
+      </div>
+
+      <!-- محصول سوم -->
+      <div class="card-two">
+          <div class="image_container">
+              <a href="/shop/product3/">
+                  <img src="{% static 'images/header_images/product-four.jpg' %}" alt="سالامی" style="width: 100%; height: 100%;">
+              </a>
+          </div>
+          <div class="title">
+              <span class="product-two-header">سالامی</span>
+          </div>
+          <a href="/shop/product3/">
+              <button class="cart-button">
+                  <span class="more-info">اطلاعات بیشتر</span>
+              </button>
+          </a>
+      </div>
+
   </div>
-  <div class="title">
-    <span class="product-one-header">کالباس مورتادلا</span>
-  </div>
-  <a href="/shop/product1/">
-  <button class="cart-button">
-    <span class="more-info">اطلاعات بیشتر</span>
-  </button>
-  </a>
-</div>
-    <!--product-two-->
-        <div class="card-two">
-  <div class="image_container">
-    <a href="/shop/product2/">
-    <img src="{% static 'images/header_images/product-three.jpg'%}" style="width: 100%;height: 100%;">
-      </a>
-    <path
-        d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"
-      ></path>
-    </svg>
-  </div>
-  <div class="title">
-    <span class="product-two-header">هات داگ</span>
-  </div>
-  <a href="/shop/product2/">
-  <button class="cart-button">
-    <span class="more-info">اطلاعات بیشتر</span>
-  </button>
-  </a>
-</div>
-<!--product-three-->
-        <div class="card-two">
-  <div class="image_container">
-    <a href="/shop/product3/">
-    <img src="{% static 'images/header_images/product-four.jpg'%}" style="width: 100%;height: 100%;">
-      </a>
-    <path
-        d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"
-      ></path>
-    </svg>
-  </div>
-  <div class="title">
-    <span class="product-two-header">سالامی</span>
-  </div>
-  <a href="/shop/product3/">
-  <button class="cart-button">
-    <span class="more-info">اطلاعات بیشتر</span>
-  </button>
-  </a>
-</div>
-<!--container-line-one-->
+  <!--container-line-one-->
 </div>
 <!--container-line-two-->
     <div class="product-first-line">
@@ -136,6 +176,5 @@
 </div>
 <!--container-line-one-->
 </div>
- {% include 'footer.html'%}
 </body>
 </html>

@@ -1,1045 +1,192 @@
-* {box-sizing:border-box}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin-top: 50px;
-  margin-left: 200px;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-  
-}
-.news-header{
-      text-decoration: underline;
-    text-decoration-color: brown;
-text-decoration-thickness: 3px;
-text-underline-offset: 8px;
-margin-top: -50px;
-margin-left: 400px;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-
-
-
-
-* {
-  box-sizing: border-box;
-}
-
-/* Position the image container (needed to position the left and right arrows) */
-.container {
-  position: relative;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Six columns side by side */
-.column {
-  float: left;
-  width: 16.66%;
-}
-
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
-}
-.entry-room {
-    width: 50%; /* یا مقدار پیکسل مورد نظر شما */
-    height: auto;
-    flex-shrink: 0;
-}
-
-
-.entry-room {
-    width: 45%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.products{
-  margin-left: 670px;
-  margin-top: 50px;
-      text-decoration: underline;
-    text-decoration-color: brown;
-text-decoration-thickness: 3px;
-text-underline-offset: 8px;
-}
-.product-one{
-  height: 350px;
-  width: 200px;
-  margin-left: 50px;
-}
-/*product cards
-/* From Uiverse.io by LeCurry24 */ 
-.card {
-  --bg-card: #27272a;
-  --primary: #6d28d9;
-  --primary-800: #4c1d95;
-  --primary-shadow: #2e1065;
-  --light: #d9d9d9;
-  --zinc-800: #18181b;
-  --bg-linear: linear-gradient(0deg, var(--primary) 50%, var(--light) 125%);
-
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-
-  padding: 1rem;
-  width: 14rem;
-  background-color: var(--bg-card);
-
-  border-radius: 1rem;
-  margin-left: 30px;
-
-}
-.card-two{
-    --bg-card: #27272a;
-  --primary: #6d28d9;
-  --primary-800: #4c1d95;
-  --primary-shadow: #2e1065;
-  --light: #d9d9d9;
-  --zinc-800: #18181b;
-  --bg-linear: linear-gradient(0deg, var(--primary) 50%, var(--light) 125%);
-
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-
-  padding: 1rem;
-  width: 14rem;
-  background-color: var(--bg-card);
-
-  border-radius: 1rem;
-  margin-left: 400px;
-  margin-top: -230px;
-}
-.card-three{
-      --bg-card: #27272a;
-  --primary: #6d28d9;
-  --primary-800: #4c1d95;
-  --primary-shadow: #2e1065;
-  --light: #d9d9d9;
-  --zinc-800: #18181b;
-  --bg-linear: linear-gradient(0deg, var(--primary) 50%, var(--light) 125%);
-
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-
-  padding: 1rem;
-  width: 14rem;
-  background-color: var(--bg-card);
-
-  border-radius: 1rem;
-  margin-left: 770px;
-  margin-top: -230px;
-}
-.card-four{
-        --bg-card: #27272a;
-  --primary: #6d28d9;
-  --primary-800: #4c1d95;
-  --primary-shadow: #2e1065;
-  --light: #d9d9d9;
-  --zinc-800: #18181b;
-  --bg-linear: linear-gradient(0deg, var(--primary) 50%, var(--light) 125%);
-
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-
-  padding: 1rem;
-  width: 14rem;
-  background-color: var(--bg-card);
-
-  border-radius: 1rem;
-  margin-left: 1140px;
-  margin-top: -230px;
-  margin-bottom: 50px;
-}
-
-.image_container {
-  overflow: hidden;
-  cursor: pointer;
-
-  position: relative;
-  z-index: 5;
-
-  width: 100%;
-  height: 8rem;
-  background-color: var(--primary-800);
-
-  border-radius: 0.5rem;
-}
-
-.image_container .image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  width: 3rem;
-  fill: var(--light);
-}
-
-.title {
-  overflow: clip;
-
-  width: 100%;
-
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--light);
-  text-transform: capitalize;
-  text-wrap: nowrap;
-  text-overflow: ellipsis;
-  margin-left: 70px;
-}
-
-.cart-button {
-  cursor: pointer;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.25rem;
-
-  padding: 0.5rem;
-  width: 100%;
-  background-image: var(--bg-linear);
-
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--light);
-  text-wrap: nowrap;
-
-  border: 2px solid hsla(262, 83%, 58%, 0.5);
-  border-radius: 0.5rem;
-  box-shadow: inset 0 0 0.25rem 1px var(--light);
-}
-.product-container{
-  float: left;
-  display: flexbox;
-}
-/*about brand
-/**/ 
-.about {
-  background: rgba(172, 7, 226, 0.5);
-  position: relative;
-  max-width: 250px;
-  height: 350px;
-  border-radius: 5px;
-  padding: 1rem;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 7.5px;
-  transition: 0.5s ease;
-  color: white;
-  margin-top: 100px;
-  float: right;
-
-}
-
-.about::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-        35.36% 35.36% at 100% 25%,
-        #0000 66%,
-        #c79013 68% 70%,
-        #0000 72%
-      )
-      32px 32px / calc(2 * 32px) calc(2 * 32px),
-    radial-gradient(
-        35.36% 35.36% at 0 75%,
-        #0000 66%,
-        #c79013 68% 70%,
-        #0000 72%
-      )
-      32px 32px / calc(2 * 32px) calc(2 * 32px),
-    radial-gradient(
-        35.36% 35.36% at 100% 25%,
-        #0000 66%,
-        #c79013 68% 70%,
-        #0000 72%
-      )
-      0 0 / calc(2 * 32px) calc(2 * 32px),
-    radial-gradient(
-        35.36% 35.36% at 0 75%,
-        #0000 66%,
-        #c79013 68% 70%,
-        #0000 72%
-      )
-      0 0 / calc(2 * 32px) calc(2 * 32px),
-    repeating-conic-gradient(#295b3f 0 25%, #0000 0 50%) 0 0 / calc(2 * 32px)
-      calc(2 * 32px),
-    radial-gradient(#0000 66%, #c79013 68% 70%, #0000 72%) 0 calc(32px / 2) /
-      32px 32px #295b3f;
-  opacity: 0.5;
-  transition: 0.3s ease;
-}
-
-.about:hover::after {
-  opacity: 0.25;
-}
-
-.cardHeader {
-  text-transform: uppercase;
-  position: relative;
-  width: max-content;
-  font-weight: bold;
-  transition: all 0.5s ease;
-  margin-left: 105px;
-}
-.cardHeader::after {
-  content: "";
-  width: calc(100% + 1rem);
-  height: 2.5px;
-  transform: translateX(calc(-100% - 1rem));
-  background: aqua;
-  bottom: -2px;
-  left: 0;
-  position: absolute;
-  opacity: 0;
-}
-
-.details {
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  transform: translateY(95%);
-  transition: all 0.5s ease;
-}
-
-.button {
-  background-color: aqua;
-  color: black;
-  padding: 2.5px 5px;
-  width: max-content;
-  border-radius: 2.5px;
-}
-.about:hover .details {
-  transform: translateY(0%);
-  transition-delay: 0.5s;
-}
-.about:hover .cardHeader::after {
-  transform: translateX(-1rem);
-  transition: 0.5s ease;
-  opacity: 1;
-}
-.about:hover {
-  transform: scale(1.1);
-  border-radius: 15px;
-}
-.cardText{
-  float: right;
-  margin-left: 20px;
-  direction: rtl;
-}
-/*news
-/*  */ 
-.tooltip-container {
-  position: relative;
-  display: inline-block;
-  margin-top: 70px;
- margin-bottom: 100px;
-margin-left: -440px;
-}
-
-.text {
-  color: #333;
-  font-size: 18px;
-  cursor: pointer;
-  font-size: 35px;
-  
-}
-
-.tooltip {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  visibility: hidden;
-  background: #0b798a;
-  color: #fff;
-  padding: 10px;
-  border-radius: 4px;
-  transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
-  z-index: 1;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-
-
-}
-
-.tooltip::before {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  border-width: 8px;
-  border-style: solid;
-  border-color: transparent transparent #0b798a transparent;
-  transform: translateX(-50%);
-}
-
-.tooltip-container:hover .tooltip {
-  top: 120%;
-  opacity: 1;
-  visibility: visible;
-  background: #0e94a0;
-  transform: translate(-50%, -5px);
-}
-/*news-one
-/*  */ 
-.news {
-  max-width: 300px;
-  border-radius: 0.5rem;
-  background-color: #fff;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  border: 1px solid transparent;
-  margin-left: 20px;
-}
-.news-two{
-    max-width: 300px;
-  border-radius: 0.5rem;
-  background-color: #fff;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  border: 1px solid transparent;
-margin-right: -120px;
-}
-
-.news a {
-  text-decoration: none
-}
-.news-two a{
-   text-decoration: none
-}
-
-.content {
-  padding: 1.1rem;
-}
-
-.image {
-  object-fit: cover;
-  width: 100%;
-  height: 150px;
-  background-color: rgb(239, 205, 255);
-}
-
-.newstitle {
-  color: #111827;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-weight: 600;
-  direction: rtl;
-  margin-left: 125px;
- 
-}
-.newstitle-two{
-   color: #111827;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-weight: 600;
-  direction: rtl;
-  margin-left: 158px;
-}
-.newstitle-three{
-     color: #111827;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-weight: 600;
-  direction: rtl;
-  float: right;
-}
-.desc {
-  margin-top: 0.5rem;
-  color: #6B7280;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  direction: rtl;
-}
-
-
-.action {
-  display: inline-flex;
-  margin-top: 1rem;
-  color: #ffffff;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 500;
-  align-items: center;
-  gap: 0.25rem;
-  background-color: #2563EB;
-  padding: 4px 8px;
-  border-radius: 4px;
-  float: right;
-}
-
-.action span {
-  transition: .3s ease;
-}
-
-.action:hover span {
-  transform: translateX(4px);
-}
-.news-icons-container{
-  display: inline-flex;
-  margin-top: 70px;
-  float: left;
-}
-
-
-.why-title{
-margin-top: 1000px;
-margin-left: 610px;
-    text-decoration: underline;
-    text-decoration-color: brown;
-text-decoration-thickness: 3px;
-text-underline-offset: 8px;
-}
-.banner-image{
-  width: 700px;
-  height: 400px;
-  float: right;
-  margin-top: 20px;
-}
-.icon-image{
-  float: left;
-  width: 150px;
-  height: 150px;
-  border-radius: 20%;
-  margin-left: 70px;
-}
-.icon-image-two{
-    float: right;
-  width: 150px;
-  height: 150px;
-  border-radius: 20%;
-margin-right: 180px;
-margin-top: -400px;
-
-}
-.icon-image-three{
-      float: right;
-  width: 150px;
-  height: 150px;
-  border-radius: 20%;
-margin-right: 180px;
-margin-top: -200px;
-}
-.why-title-two{
-  margin-left: 90px;
-  margin-top: 180px;
-}
-.why-title-three{
-    margin-left: 60px;
-  margin-top: 180px;
-  
-}
-.why-title-four{
-margin-right: 190px;
-float: right;
-margin-top: -240px;
-}
-.why-title-fifth{
-  margin-right: 215px;
-float: right;
-margin-top: -40px;
-}
-/* newspaper clases */ 
-/*  */ 
-.form {
-  display: flex;
-  flex-direction: column;
-  background: #606c88;
-  background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);
-  background: linear-gradient(to right, #3f4c6b, #606c88);
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 350px;
-  margin-top: 100px;
-  float: left;
-  margin-left: 120px;
-}
-
-.title {
-  font-size: 2rem;
-  line-height: 2rem;
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  color: #fff;
-margin-left: -2px;
-direction: rtl;
-}
-
-.description {
-  line-height: 1.5rem;
-  font-size: 1rem;
-  margin-top: 1rem;
-  color: rgb(209 213 219);
-  direction: rtl;
-}
-
-.form div {
-  display: flex;
-  max-width: 28rem;
-  margin-top: 1rem;
-  column-gap: 0.5rem;
-}
-
-.form div input {
-  outline: none;
-  line-height: 1.5rem;
-  font-size: 0.875rem;
-  color: rgb(255 255 255 );
-  padding: 0.5rem 0.875rem;
-  background-color: rgb(255 255 255 / 0.05);
-  border: 1px solid rgba(253, 253, 253, 0.363);
-  border-radius: 0.375rem;
-  flex: 1 1 auto;
-}
-
-.form div input::placeholder {
-  color: rgb(216, 212, 212);
-  float: right;
-}
-
-.form div input:focus {
-  border: 1px solid rgb(99 102 241);
-}
-
-.form div button {
-  color: #fff;
-  font-weight: 600;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  padding: 0.625rem 0.875rem;
-  background-color: rgb(99 102 241);
-  border-radius: 0.375rem;
-  border: none;
-  outline: none;
-}
-/* comments gallery */ 
-
-@keyframes autoRun3d {
-  from {
-    transform: perspective(800px) rotateY(-360deg);
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
   }
-  to {
-    transform: perspective(800px) rotateY(0deg);
-  }
-}
 
-@keyframes animateBrightness {
-  10% {
-    filter: brightness(1);
-  }
-  50% {
-    filter: brightness(0.1);
-  }
-  90% {
-    filter: brightness(1);
-  }
-}
-
-
-.comment-contanier{
-  float: right;
-  display: flexbox;
-}
-/* From Uiverse.io by vinodjangid07 */ 
-.bookmarkBtn {
-  width: 130px;
-  height: 40px;
-  border-radius: 40px;
-  border: none;
-  background-color: rgb(255, 255, 255);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition-duration: .3s;
-  overflow: hidden;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.062);
-  margin-top: 50px;
-float: right;
-margin-right: 400px;
-}
-
-.IconContainer {
-  width: 30px;
-  height: 30px;
-  background-color: rgb(103, 74, 228);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  z-index: 2;
-  transition-duration: .3s;
-}
-
-.icon {
-  border-radius: 1px;
-}
-
-.text {
-  height: 100%;
-  width: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(26, 26, 26);
-  z-index: 1;
-  transition-duration: .3s;
-  font-size: 1.04em;
-  font-weight: 600;
-}
-
-.bookmarkBtn:hover .IconContainer {
-  width: 120px;
-  border-radius: 40px;
-  transition-duration: .3s;
-}
-
-.bookmarkBtn:hover .text {
-  transform: translate(10px);
-  width: 0;
-  font-size: 0;
-  transition-duration: .3s;
-}
-
-.bookmarkBtn:active {
-  transform: scale(0.95);
-  transition-duration: .3s;
-}
-
-.task {
-  position: relative;
-  color: #2e2e2f;
-  cursor: move;
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
-  margin-bottom: 1rem;
-  border: 3px dashed transparent;
-  max-width: 350px;
-  margin-top: 20px;
-
-}
-.task-two{
+  .slideshow-container {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     position: relative;
-  color: #2e2e2f;
-  cursor: move;
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
-  margin-bottom: 1rem;
-  border: 3px dashed transparent;
-  max-width: 350px;
-  margin-top: 20px;
-  padding-right: 120px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+  }
 
-}
+  .slideshow-container img {
+    width: 100vw;
+    height: auto;
+    display: block;
+    padding-top: 5%;
+  }
+  /* تنظیم کلی برای تمام کارت‌ها */
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* کارت‌ها وسط‌چین شوند */
+    gap: 30px; /* فاصله بین کارت‌ها (می‌توان کمتر هم کرد) */
+    padding-left: 10%; /* فاصله از دو طرف صفحه */
+    padding-top: 40px;
+  }
 
-.task:hover {
-  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
-  border-color: rgba(162, 179, 207, 0.2) !important;
-}
+  /* استایل عمومی کارت‌ها */
+  .card, .card-two, .card-three, .card-four {
+    width: 220px; /* عرض هر کارت */
+    margin: 5px; /* فاصله اطراف کارت */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
 
-.task p {
-  font-size: 15px;
-  margin: 1.2rem 0;
-}
+  /* حذف فاصله‌های اضافی داخل عکس‌ها */
+  .image_container img {
+    display: block;
+  }
+  /* بخش درباره برند */
+  .about {
+    width: 100%;
+    background-color: #32a436;
+    padding: 50px 100%;
+    text-align: right;
+    direction: rtl;
+    line-height: 1.8;
+     
+  }
 
-.tag {
-  border-radius: 100px;
-  padding: 4px 13px;
-  font-size: 12px;
-  color: #ffffff;
-  background-color: #1389eb;
-}
+  .about .details {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #c7be5b;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
 
-.tags {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+  .about .cardHeader {
+    font-size: 28px;
+    font-weight: bold;
+    color: #b30000;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 
-.options {
-  background: transparent;
-  border: 0;
-  color: #c4cad3;
-  font-size: 17px;
-}
+  .about .cardText {
+    font-size: 18px;
+    color: #333;
+    text-align: justify;
+  }
 
-.options svg {
-  fill: #9fa4aa;
-  width: 20px;
-}
+  /* بخش اخبار */
+  .all-news {
+    text-align: center;
+    margin-top: 70px;
+  }
 
-.stats {
-  position: relative;
-  width: 100%;
-  color: #9fa4aa;
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+  .news-header {
+    font-size: 30px;
+    color: #b30000;
+    border-bottom: 3px solid #b30000;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
 
-.stats div {
-  margin-right: 1rem;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
+  /* ظرف کلی هر خبر */
+  .news-icons-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+  }
 
-.stats svg {
-  margin-right: 5px;
-  height: 100%;
-  stroke: #9fa4aa;
-}
+  /* کارت خبر */
+  .news {
+    display: flex;
+    flex-direction: row-reverse; /* برای هماهنگی با فارسی */
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    max-width: 1000px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    margin-right: 100px;
+  }
 
-.viewer span {
-  height: 30px;
-  width: 30px;
-  background-color: rgb(28, 117, 219);
-  margin-right: -10px;
-  border-radius: 50%;
-  border: 1px solid #fff;
-  display: grid;
-  align-items: center;
-  text-align: center;
-  font-weight: bold;
-  color: #fff;
-  padding: 2px;
-}
+  .news:hover {
+    transform: translateY(-5px);
+  }
 
-.viewer span svg {
-  stroke: #fff;
-}
+  /* بخش تصویر */
+  .news .image {
+    flex: 0 0 40%;
+  }
 
-.custom-btn {
-  width: 130px;
-  height: 40px;
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 500;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-  box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
-  outline: none;
-  font-size: 15px;
-margin-left: 1000px;
-}
+  .news .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-.btn-2 {
-  background: #004dff;
-  background: linear-gradient(0deg, #004dff 0%, #004dff 100%);
-  border: none;
-}
+  /* بخش متن خبر */
+  .news .content {
+    flex: 1;
+    padding: 25px;
+    direction: rtl;
+  }
 
-.btn-2:before {
-  height: 0%;
-  width: 2px;
-}
+  .news .newstitle,
+  .news .newstitle-two,
+  .news .newstitle-three {
+    font-size: 22px;
+    color: #b30000;
+    font-weight: bold;
+    text-decoration: none;
+  }
 
-.btn-2:hover {
-  box-shadow: 4px 4px 6px 0 rgba(255,255,255,.5),
-              -4px -4px 6px 0 rgba(116, 125, 136, .5), 
-    inset -4px -4px 6px 0 rgba(255,255,255,.2),
-    inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
-}
-.all-comment{
-display: flex;
-margin-top: 140px;
-padding-left: 250px;
-}
-.comment-text{
-  direction: rtl;
-  margin-left: 20px;
-}
+  .news .desc {
+    font-size: 17px;
+    color: #333;
+    margin-top: 10px;
+    line-height: 1.7;
+    text-align: justify;
+  }
 
+  .news .action {
+    display: inline-block;
+    margin-top: 10px;
+    color: #b30000;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
 
+  .news .action:hover {
+    color: #ff4444;
+  }
 
+  /* واکنش‌گرایی برای موبایل */
+  @media (max-width: 768px) {
+    .news {
+      flex-direction: column;
+      max-width: 90%;
+    }
 
+    .news .image {
+      width: 100%;
+      height: 200px;
+    }
 
+    .about {
+      padding: 30px 5%;
+    }
 
+    .about .cardHeader {
+      font-size: 24px;
+    }
 
-
-
-
-
-
-
-
-
-
-
+    .about .cardText {
+      font-size: 16px;
+    }
+  }
+  

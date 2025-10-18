@@ -1,80 +1,239 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contactus page</title>
-     <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <title>تماس با ما</title>
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            background-color: #fafafa;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* محدوده ثابت مرکزی کل محتوا */
+        .page-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        .contact-header {
+            font-size: 2rem;
+            margin: 40px 0 20px;
+            color: #333;
+        }
+
+        .contact-sections {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+        }
+
+        /* بخش اطلاعات تماس */
+        .contact-items, .contact-items-two {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .number-container,
+        .addres-container,
+        .email-container,
+        .day-container {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 280px;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .number-container:hover,
+        .addres-container:hover,
+        .email-container:hover,
+        .day-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+
+        .telephone-image,
+        .address-image,
+        .clock-image {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #007BFF;
+            margin: 10px 0;
+        }
+
+        p {
+            color: #444;
+            font-size: 1rem;
+        }
+
+        /* ---------- فرم تماس ---------- */
+        .form {
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            width: 600px;
+            padding: 30px;
+            text-align: right;
+        }
+
+        .form label {
+            display: block;
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .form .flex {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .input, .input01 {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-bottom: 2px solid #ccc;
+            outline: none;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            background-color: transparent;
+        }
+
+        .input:focus, .input01:focus {
+            border-color: #007BFF;
+        }
+
+        .input01 {
+            resize: none;
+            min-height: 100px;
+        }
+
+        .label-icon-one,
+        .label-icon-two,
+        .label-icon-three,
+        .label-icon-four,
+        .label-icon-five {
+            position: absolute;
+            top: -20px;
+            right: 5px;
+            font-size: 0.9rem;
+            color: #007BFF;
+        }
+
+        /* ---------- دکمه ثبت ---------- */
+        .fancy {
+            position: relative;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 12px 40px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .fancy:hover {
+            background: #0056b3;
+        }
+
+        /* جلوگیری از تغییر عرض صفحه */
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+    </style>
 </head>
 <body>
-     {% include 'navbar.html'%}
-     <h1 class="contact-header">ارتباط با شما افتخار ماست</h1>
-     <div class="contact-items">
-        <div class="number-container">
-             <img src="{% static 'images/header_images/telephone.png'%}" class="telephone-image">
-              <h2 class="telephone-header">تلفن</h2>
-         <P class="">021-345678</P>
-      </div>
-       <div class="addres-container">
-             <img src="{% static 'images/header_images/location.png'%}" class="address-image">
-              <h2 class="address-header">آدرس</h2>
-         <P class="">تهران، خیابان ولیعصر، بالاتر از میدان ونک، پلاک ۲۳۴، طبقه دوم، واحد ۵</P>
-      </div>
-      <!--contact-part-one-->
-     </div>
-      <!--contact-part-two-->
-          <div class="contact-items-two">
-        <div class="email-container">
-             <img src="{% static 'images/header_images/mail.png'%}" class="telephone-image">
-              <h2 class="telephone-header">ایمیل</h2>
-      </div>
-       <P class="email-text">proteinshop13@gmail.com</P>
-       <div class="day-container">
-             <img src="{% static 'images/header_images/working-hours.png'%}" class="clock-image">
-              <h2 class="day-header">ساعات کاری</h2>
-         <P class="">از شنبه تا پنجشنبه 9 صبح تا 8 شب</P>
-      </div>
-      <!--contact-part-two-->
-     </div>
-     <!--contact-form-->
+    {% include 'navbar.html' %}
     
-<form class="form">
-    
-    <div class="flex">
-        <label>
-            <input required="" placeholder="" type="text" class="input">
-            <span class="label-icon-one">نام</span>
-        </label>
+    <div class="page-container">
+        <h1 class="contact-header">ارتباط با شما افتخار ماست</h1>
 
-        <label>
-            <input required="" placeholder="" type="text" class="input">
-            <span class="label-icon-two">نام خانوادگی
-            </span>
-        </label>
-    </div>  
-            
-    <label>
-        <input required="" placeholder="" type="email" class="input">
-        <span class="label-icon-three">ایمیل</span>
-    </label> 
-        
-    <label>
-        <input required="" type="tel" placeholder="" class="input">
-        <span class="label-icon-four">شماره تماس</span>
-    </label>
-    <label>
-        <textarea required="" rows="3" placeholder="" class="input01"></textarea>
-        <span class="label-icon-five">پیام</span>
-    </label>
-    
-    <button class="fancy" href="#">
-      <span class="top-key"></span>
-      <span class="text">ثبت</span>
-      <span class="bottom-key-1"></span>
-      <span class="bottom-key-2"></span>
-    </button>
-</form>
-   {% include 'footer.html'%}
+        <div class="contact-sections">
+            <!-- بخش اطلاعات تماس -->
+            <div class="contact-items">
+                <div class="number-container">
+                    <img src="{% static 'images/header_images/telephone.png' %}" class="telephone-image" alt="تلفن">
+                    <h2>تلفن</h2>
+                    <p>021-345678</p>
+                </div>
+
+                <div class="addres-container">
+                    <img src="{% static 'images/header_images/location.png' %}" class="address-image" alt="آدرس">
+                    <h2>آدرس</h2>
+                    <p>تهران، خیابان ولیعصر، بالاتر از میدان ونک، پلاک ۲۳۴، طبقه دوم، واحد ۵</p>
+                </div>
+            </div>
+
+            <div class="contact-items-two">
+                <div class="email-container">
+                    <img src="{% static 'images/header_images/mail.png' %}" class="telephone-image" alt="ایمیل">
+                    <h2>ایمیل</h2>
+                    <p class="email-text">proteinshop13@gmail.com</p>
+                </div>
+
+                <div class="day-container">
+                    <img src="{% static 'images/header_images/working-hours.png' %}" class="clock-image" alt="ساعات کاری">
+                    <h2>ساعات کاری</h2>
+                    <p>از شنبه تا پنجشنبه، ۹ صبح تا ۸ شب</p>
+                </div>
+            </div>
+
+            <!-- فرم تماس -->
+            <form class="form">
+                <div class="flex">
+                    <label>
+                        <input required type="text" class="input">
+                        <span class="label-icon-one">نام</span>
+                    </label>
+
+                    <label>
+                        <input required type="text" class="input">
+                        <span class="label-icon-two">نام خانوادگی</span>
+                    </label>
+                </div>  
+
+                <label>
+                    <input required type="email" class="input">
+                    <span class="label-icon-three">ایمیل</span>
+                </label> 
+
+                <label>
+                    <input required type="tel" class="input">
+                    <span class="label-icon-four">شماره تماس</span>
+                </label>
+
+                <label>
+                    <textarea required rows="3" class="input01"></textarea>
+                    <span class="label-icon-five">پیام</span>
+                </label>
+                
+                <button type="submit" class="fancy">
+                    <span class="text">ثبت</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
 </body>
 </html>

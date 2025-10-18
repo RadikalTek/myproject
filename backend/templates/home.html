@@ -2,13 +2,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .slideshow-container {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+  }
+
+  .slideshow-container img {
+    width: 100vw;
+    height: auto;
+    display: block;
+    padding-top: 5%;
+  }
+  /* تنظیم کلی برای تمام کارت‌ها */
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* کارت‌ها وسط‌چین شوند */
+    gap: 30px; /* فاصله بین کارت‌ها (می‌توان کمتر هم کرد) */
+    padding-left: 10%; /* فاصله از دو طرف صفحه */
+    padding-top: 40px;
+  }
+
+  /* استایل عمومی کارت‌ها */
+  .card, .card-two, .card-three, .card-four {
+    width: 220px; /* عرض هر کارت */
+    margin: 5px; /* فاصله اطراف کارت */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+
+  /* حذف فاصله‌های اضافی داخل عکس‌ها */
+  .image_container img {
+    display: block;
+  }
+  /* بخش درباره برند */
+  .about {
+    width: 100%;
+    background-color: #32a436;
+    padding: 50px 100%;
+    text-align: right;
+    direction: rtl;
+    line-height: 1.8;
+     
+  }
+
+  .about .details {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #c7be5b;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+
+  .about .cardHeader {
+    font-size: 28px;
+    font-weight: bold;
+    color: #b30000;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .about .cardText {
+    font-size: 18px;
+    color: #333;
+    text-align: justify;
+  }
+
+  /* بخش اخبار */
+  .all-news {
+    text-align: center;
+    margin-top: 70px;
+  }
+
+  .news-header {
+    font-size: 30px;
+    color: #b30000;
+    border-bottom: 3px solid #b30000;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+
+  /* ظرف کلی هر خبر */
+  .news-icons-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+  }
+
+  /* کارت خبر */
+  .news {
+    display: flex;
+    flex-direction: row-reverse; /* برای هماهنگی با فارسی */
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    max-width: 1000px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    margin-right: 100px;
+  }
+
+  .news:hover {
+    transform: translateY(-5px);
+  }
+
+  /* بخش تصویر */
+  .news .image {
+    flex: 0 0 40%;
+  }
+
+  .news .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* بخش متن خبر */
+  .news .content {
+    flex: 1;
+    padding: 25px;
+    direction: rtl;
+  }
+
+  .news .newstitle,
+  .news .newstitle-two,
+  .news .newstitle-three {
+    font-size: 22px;
+    color: #b30000;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .news .desc {
+    font-size: 17px;
+    color: #333;
+    margin-top: 10px;
+    line-height: 1.7;
+    text-align: justify;
+  }
+
+  .news .action {
+    display: inline-block;
+    margin-top: 10px;
+    color: #b30000;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .news .action:hover {
+    color: #ff4444;
+  }
+
+  /* واکنش‌گرایی برای موبایل */
+  @media (max-width: 768px) {
+    .news {
+      flex-direction: column;
+      max-width: 90%;
+    }
+
+    .news .image {
+      width: 100%;
+      height: 200px;
+    }
+
+    .about {
+      padding: 30px 5%;
+    }
+
+    .about .cardHeader {
+      font-size: 24px;
+    }
+
+    .about .cardText {
+      font-size: 16px;
+    }
+  }
+  
+</style>
+
 </head>
 <body>
-    <!--navbar-->
+  <!--navbar-->
     {% include 'navbar.html'%}
 <!-- Slideshow container -->
 <div class="slideshow-container">
@@ -42,12 +237,8 @@
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
-
-
-
 <!--products-->
 <div class="product-container">
-  <h1 class="products">محصولات</h1>
 <div class="card">
   <div class="image_container">
     <img src="{% static 'images/header_images/product-one-new.jpg'%}" style="width: 100%;height: 100%;">
@@ -129,7 +320,6 @@
 <!--news-->
 <!-- --> 
  <div class="all-news">
-<h1 class="news-header">اخبار</h1>
 </div>
 <!--news-one-->
 <!--  --> 
